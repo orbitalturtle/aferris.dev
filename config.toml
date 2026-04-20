@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://aferris.dev"
+theme = "archie-zola"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,7 +14,35 @@ build_search_index = true
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
-theme = "archie-zola"
 mode = "dark"
 subtitle = "Wazzup"
+
+copyright = "Alyssa Ferris"
+
+[extra.translations]
+languages = [{name = "en", url = "/"}]
+
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "Home", url = "/", weight = 1 },
+    { name = "Posts", url = "/posts", weight = 2 },
+    { name = "About", url = "/about", weight = 3 },
+]
+
+[[extra.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/orbitalturtle"
+
+[[extra.social]]
+icon = "twitter"
+name = "Twitter"
+url = "https://x.com/mehmehturtle"
+
