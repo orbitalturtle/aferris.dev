@@ -19,6 +19,8 @@ subtitle = "Wazzup"
 
 copyright = "Alyssa Ferris"
 
+custom_css = ["css/custom.css"]
+
 [extra.translations]
 languages = [{name = "en", url = "/"}]
 
