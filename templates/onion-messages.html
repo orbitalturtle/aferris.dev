@@ -1,0 +1,107 @@
+{% extends "index.html" %}
+
+{% block main_content %}
+<main class="post">
+    <h1>{{ page.title }}</h1>
+    {{ page.content | safe }}
+
+    <div id="chart-status" style="margin: 1rem 0; color: #888;"></div>
+    <svg id="onion-chart" width="900" height="420" style="max-width: 100%; height: auto;"></svg>
+</main>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+(async function () {
+    const status = document.getElementById("chart-status");
+    const svg = d3.select("#onion-chart");
+
+    const raw = await d3.json("/data/onion-messages.json");
+
+    if (!raw || raw.length === 0) {
+        status.textContent = "No snapshots yet — check back after the first cron run.";
+        return;
+    }
+
+    const parseDate = d3.timeParse("%Y-%m-%d");
+    const data = raw.map(d => ({
+        date: parseDate(d.date),
+        percentage: +d.percentage,
+        total: d.total_nodes,
+        onion: d.onion_msg_nodes,
+    })).sort((a, b) => a.date - b.date);
+
+    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const width = 900 - margin.left - margin.right;
+    const height = 420 - margin.top - margin.bottom;
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.date))
+        .range([0, width]);
+
+    const yMax = Math.max(10, d3.max(data, d => d.percentage) * 1.2);
+    const y = d3.scaleLinear()
+        .domain([0, yMax])
+        .nice()
+        .range([height, 0]);
+
+    g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x).ticks(Math.min(data.length, 10)).tickFormat(d3.timeFormat("%b %d")));
+
+    g.append("g")
+        .call(d3.axisLeft(y).tickFormat(d => d + "%"));
+
+    g.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left + 15)
+        .attr("text-anchor", "middle")
+        .attr("fill", "currentColor")
+        .style("font-size", "0.85rem")
+        .text("% of nodes advertising option_onion_messages");
+
+    const line = d3.line()
+        .x(d => x(d.date))
+        .y(d => y(d.percentage))
+        .curve(d3.curveMonotoneX);
+
+    g.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "#50fa7b")
+        .attr("stroke-width", 2)
+        .attr("d", line);
+
+    const tooltip = d3.select("body").append("div")
+        .style("position", "absolute")
+        .style("padding", "6px 10px")
+        .style("background", "#202124")
+        .style("color", "white")
+        .style("border", "1px solid #50fa7b")
+        .style("border-radius", "4px")
+        .style("font-size", "0.8rem")
+        .style("pointer-events", "none")
+        .style("opacity", 0);
+
+    g.selectAll("circle")
+        .data(data)
+        .join("circle")
+        .attr("cx", d => x(d.date))
+        .attr("cy", d => y(d.percentage))
+        .attr("r", 3.5)
+        .attr("fill", "#50fa7b")
+        .on("mouseover", (event, d) => {
+            tooltip.style("opacity", 1).html(
+                `<strong>${d3.timeFormat("%Y-%m-%d")(d.date)}</strong><br>` +
+                `${d.percentage.toFixed(2)}% (${d.onion.toLocaleString()} / ${d.total.toLocaleString()})`
+            );
+        })
+        .on("mousemove", event => {
+            tooltip.style("left", (event.pageX + 12) + "px").style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0));
+})();
+</script>
+{% endblock main_content %}
