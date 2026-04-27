@@ -5,8 +5,16 @@
     <h1>{{ page.title }}</h1>
     {{ page.content | safe }}
 
+    <style>
+        #onion-chart { background: #f7f7f5; border-radius: 6px; max-height: none !important; }
+        #onion-chart .axis path,
+        #onion-chart .axis line { stroke: #444; }
+        #onion-chart .axis text { fill: #222; font-size: 12px; }
+        #onion-chart .axis-label { fill: #222; font-size: 13px; }
+    </style>
+
     <div id="chart-status" style="margin: 1rem 0; color: #888;"></div>
-    <svg id="onion-chart" width="900" height="420" style="max-width: 100%; height: auto;"></svg>
+    <svg id="onion-chart" viewBox="0 0 900 440" preserveAspectRatio="xMidYMid meet" style="width: 100%; max-width: 900px; height: auto; display: block;"></svg>
 </main>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -30,9 +38,9 @@
         onion: d.onion_msg_nodes,
     })).sort((a, b) => a.date - b.date);
 
-    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const margin = { top: 20, right: 30, bottom: 60, left: 70 };
     const width = 900 - margin.left - margin.right;
-    const height = 420 - margin.top - margin.bottom;
+    const height = 440 - margin.top - margin.bottom;
 
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -47,19 +55,27 @@
         .range([height, 0]);
 
     g.append("g")
+        .attr("class", "axis")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x).ticks(Math.min(data.length, 10)).tickFormat(d3.timeFormat("%b %d")));
 
     g.append("g")
+        .attr("class", "axis")
         .call(d3.axisLeft(y).tickFormat(d => d + "%"));
 
     g.append("text")
+        .attr("class", "axis-label")
+        .attr("x", width / 2)
+        .attr("y", height + 45)
+        .attr("text-anchor", "middle")
+        .text("Date");
+
+    g.append("text")
+        .attr("class", "axis-label")
         .attr("transform", "rotate(-90)")
         .attr("x", -height / 2)
-        .attr("y", -margin.left + 15)
+        .attr("y", -margin.left + 18)
         .attr("text-anchor", "middle")
-        .attr("fill", "currentColor")
-        .style("font-size", "0.85rem")
         .text("% of nodes advertising option_onion_messages");
 
     const line = d3.line()
@@ -70,7 +86,7 @@
     g.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "#50fa7b")
+        .attr("stroke", "#2e8b57")
         .attr("stroke-width", 2)
         .attr("d", line);
 
@@ -90,8 +106,8 @@
         .join("circle")
         .attr("cx", d => x(d.date))
         .attr("cy", d => y(d.percentage))
-        .attr("r", 3.5)
-        .attr("fill", "#50fa7b")
+        .attr("r", 4)
+        .attr("fill", "#2e8b57")
         .on("mouseover", (event, d) => {
             tooltip.style("opacity", 1).html(
                 `<strong>${d3.timeFormat("%Y-%m-%d")(d.date)}</strong><br>` +
