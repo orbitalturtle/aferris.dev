@@ -232,5 +232,11 @@
     "total_nodes": 15822,
     "onion_msg_nodes": 1211,
     "percentage": 7.653899633421818
+  },
+  {
+    "date": "2026-06-04",
+    "total_nodes": 15835,
+    "onion_msg_nodes": 1210,
+    "percentage": 7.641300915693085
   }
 ]
