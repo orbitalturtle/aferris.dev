@@ -1,0 +1,501 @@
+{% extends "index.html" %}
+
+{% block main_content %}
+<main class="post">
+  <h1>{{ page.title }}</h1>
+  {{ page.content | safe }}
+
+  <style>
+    /* ----- All styles scoped under .feature-viz so nothing leaks out ----- */
+
+    .feature-viz {
+      --fv-ink: #e8eaf2;
+      --fv-muted: #9aa0b4;
+      --fv-card: #f7f7f5;
+      --fv-card-ink: #222;
+      --fv-card-muted: #777;
+      --fv-rule: #ececea;
+      --fv-accent: #2e8b57;
+      --fv-star-idle: #a9b1c9;
+      --fv-star-dim: #7c85a0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+    /* The archie-zola theme clamps `svg { max-height: 15px }` for inline icons.
+       Undo that for anything inside our viz container. */
+    .feature-viz svg { max-height: none !important; }
+
+    /* Constellation hero */
+    .feature-viz .constellation {
+      --fv-breakout: min(1100px, 100vw - 2rem);
+      position: relative;
+      width: var(--fv-breakout);
+      margin: 1.5rem 0 0.25rem calc(50% - var(--fv-breakout) / 2);
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(80,120,200,0.10), transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(255,180,90,0.06), transparent 55%),
+        linear-gradient(160deg, #0c1020 0%, #060810 100%);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #1a1f30;
+    }
+    .feature-viz .constellation svg {
+      display: block;
+      width: 100%;
+      height: 800px;
+    }
+    .feature-viz .star {
+      transition: fill 320ms ease, opacity 320ms ease, transform 180ms;
+      transform-box: fill-box;
+      transform-origin: center;
+      cursor: default;
+    }
+    .feature-viz .star:hover {
+      transform: scale(1.6);
+      filter: drop-shadow(0 0 6px currentColor) brightness(1.4);
+    }
+    @keyframes fv-twinkle {
+      0%, 100% { opacity: 0.82; }
+      50%      { opacity: 1.00; }
+    }
+    .feature-viz .star.is-lit { animation: fv-twinkle 4s ease-in-out infinite; }
+    .feature-viz .star.is-dim { opacity: 0.45; }
+
+    /* Feature panel (the clickable list on the side) */
+    .feature-viz .fv-panel {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      width: 280px;
+      padding: 0.85rem 0.95rem 0.7rem;
+      background: rgba(8, 10, 18, 0.72);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      backdrop-filter: blur(6px);
+      color: #cfd3df;
+      font-size: 0.9rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      line-height: 1.45;
+    }
+    .feature-viz .fv-panel .fv-heading { color: #fff; opacity: 0.85; font-size: 0.82rem; margin-bottom: 0.5rem; }
+    .feature-viz .fv-panel .fv-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      width: 100%;
+      margin: 0 0 0.3rem;
+      padding: 0.4rem 0.5rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: background 140ms, border-color 140ms;
+    }
+    .feature-viz .fv-panel .fv-feature:hover { background: rgba(255,255,255,0.06); }
+    .feature-viz .fv-panel .fv-feature:focus-visible { outline: 2px solid #fff; outline-offset: 1px; }
+    .feature-viz .fv-panel .fv-feature.is-active {
+      background: rgba(255,255,255,0.10);
+      border-color: currentColor;
+      box-shadow: inset 3px 0 0 currentColor;
+    }
+    .feature-viz .fv-panel .fv-dot {
+      flex: none;
+      width: 11px; height: 11px; border-radius: 50%;
+      background: currentColor;
+      opacity: 0.7;
+      transition: opacity 140ms, box-shadow 140ms;
+    }
+    .feature-viz .fv-panel .fv-feature.is-active .fv-dot,
+    .feature-viz .fv-panel .fv-feature:hover .fv-dot {
+      opacity: 1;
+      box-shadow: 0 0 8px currentColor;
+    }
+    .feature-viz .fv-panel .fv-name { color: #e8eaf2; flex: 1; }
+    .feature-viz .fv-panel .fv-count { color: #9aa0b4; font-size: 0.8rem; white-space: nowrap; }
+    .feature-viz .fv-panel .fv-feature.is-active .fv-count { color: #fff; }
+    .feature-viz .fv-panel .fv-footnote { color: #888; font-size: 0.76rem; margin-top: 0.45rem; }
+
+    .feature-viz .hero-caption {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      padding: 0.6rem 0.8rem;
+      background: rgba(8, 10, 18, 0.72);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      backdrop-filter: blur(6px);
+      color: #cfd3df;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      max-width: 400px;
+    }
+    .feature-viz .hero-caption strong { color: #fff; font-weight: 600; }
+
+    .feature-viz .axis-rings text { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    /* On narrow screens the panel would cover the sky; stack it underneath. */
+    @media (max-width: 640px) {
+      .feature-viz .constellation { display: flex; flex-direction: column; }
+      .feature-viz .constellation svg { height: 380px; }
+      .feature-viz .fv-panel {
+        position: static;
+        width: auto;
+        border-radius: 0;
+        border-left: 0; border-right: 0; border-bottom: 0;
+        backdrop-filter: none;
+      }
+      /* Caption sits above the sky instead of over it. */
+      .feature-viz .hero-caption {
+        position: static;
+        order: -1;
+        max-width: none;
+        border-radius: 0;
+        border-left: 0; border-right: 0; border-top: 0;
+        backdrop-filter: none;
+      }
+    }
+
+    /* Small multiples */
+    .feature-viz .fv-section { font-size: 1.05rem; margin: 2rem 0 0.5rem; }
+    .feature-viz .fv-status { color: var(--fv-muted); margin: 1rem 0 0; font-size: 0.85rem; }
+    .feature-viz .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .feature-viz .card {
+      background: var(--fv-card);
+      color: var(--fv-card-ink);
+      border-radius: 6px;
+      padding: 1rem 1rem 0.5rem;
+      border: 1px solid var(--fv-rule);
+      border-top: 3px solid var(--fv-series, var(--fv-accent));
+    }
+    .feature-viz .card h3 {
+      font-size: 0.95rem;
+      margin: 0 0 0.1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #333;
+    }
+    .feature-viz .card .sub { font-size: 0.75rem; color: var(--fv-card-muted); margin-bottom: 0.5rem; }
+    .feature-viz .card .big { font-size: 1.7rem; font-weight: 600; color: #222; line-height: 1; }
+    .feature-viz .card .delta { font-size: 0.75rem; color: var(--fv-card-muted); margin-left: 0.4rem; }
+    .feature-viz .card svg { display: block; margin-top: 0.4rem; width: 100%; height: 70px; }
+    .feature-viz .card .axis text { font-size: 9px; fill: var(--fv-card-muted); }
+    .feature-viz .card .axis path, .feature-viz .card .axis line { stroke: #ccc; }
+
+    .feature-viz .fv-footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--fv-muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 0.75rem;
+    }
+
+    .feature-viz .fv-tooltip {
+      position: absolute;
+      padding: 6px 9px;
+      background: #0e1120;
+      color: #e8eaf2;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 100ms;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+      line-height: 1.4;
+      z-index: 10;
+    }
+    .feature-viz .fv-tooltip .fv-alias { font-weight: 600; color: #fff; }
+    .feature-viz .fv-tooltip .fv-meta { color: #9aa0b4; font-size: 0.8rem; margin-top: 2px; }
+    .feature-viz .fv-tooltip .fv-feat { color: #fbd38d; margin-top: 4px; }
+  </style>
+
+  <div class="feature-viz">
+    <section class="constellation" id="fv-constellation">
+      <svg id="fv-sky" viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid slice"></svg>
+      <div class="hero-caption" id="fv-hero-caption">
+        <strong>The Lightning sky.</strong><br>
+        Each star is a sampled node. Distance from center reflects channel
+        count — the dense hubs sit near the middle. Pick a feature in the
+        panel to light up every node that advertises it.
+      </div>
+      <div class="fv-panel" id="fv-panel" role="group" aria-label="Feature filter"></div>
+    </section>
+
+    <h2 class="fv-section">Adoption over time</h2>
+    <div id="fv-status" class="fv-status">Loading…</div>
+    <div class="grid" id="fv-grid"></div>
+
+    <div class="fv-footer">
+      Sampled daily. When my LND node is online the snapshot is a full
+      <code>describegraph</code> view (~17k nodes); when it's offline the
+      script falls back to a top-N sample from
+      <a href="https://mempool.space">mempool.space</a>. Percentages reflect
+      whichever sample produced that day's snapshot.
+    </div>
+
+    <div class="fv-tooltip" id="fv-tt"></div>
+  </div>
+</main>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+(function () {
+  // One color per tracked feature. Used for lit stars, the panel rows, and
+  // the matching sparkline card so the two sections read as one system.
+  const FEATURES = [
+    { key: "onion_messages", label: "onion_messages", color: "#b794f4" },
+    { key: "route_blinding", label: "route_blinding", color: "#63b3ed" },
+    { key: "keysend",        label: "keysend",        color: "#4fd1c5" },
+  ];
+  const FEATURE_BY_KEY = Object.fromEntries(FEATURES.map(f => [f.key, f]));
+  const STAR_IDLE = "#a9b1c9";
+  const STAR_DIM  = "#7c85a0";
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  (async () => {
+    const tt = d3.select("#fv-tt");
+
+    // ---------- Constellation ----------
+    const nodesDoc = await d3.json("/data/feature-adoption/latest-nodes.json").catch(() => null);
+    const skySvg = d3.select("#fv-sky");
+
+    if (nodesDoc && nodesDoc.nodes && nodesDoc.nodes.length) {
+      const W = 1100, H = 800;
+      const cx = W / 2, cy = H / 2;
+      const nodes = nodesDoc.nodes.map(n => ({...n, supportSet: new Set(n.supports)}));
+
+      const maxCh = d3.max(nodes, n => n.channels) || 1;
+      const minCh = d3.min(nodes, n => n.channels) || 1;
+      const rScale = d3.scaleLog()
+        .domain([Math.max(minCh, 1), maxCh])
+        .range([H * 0.42, 18])
+        .clamp(true);
+      const size = n => 3.2 + Math.log10(1 + n.channels) * 2.2;
+
+      nodes.forEach(n => {
+        const targetR = rScale(Math.max(1, n.channels));
+        const theta = Math.random() * Math.PI * 2;
+        n.x = cx + Math.cos(theta) * targetR;
+        n.y = cy + Math.sin(theta) * targetR;
+        n.targetR = targetR;
+      });
+
+      const ringsG = skySvg.append("g").attr("class", "axis-rings");
+      [100, 500, 1500].forEach(ch => {
+        if (ch > maxCh) return;
+        const r = rScale(ch);
+        ringsG.append("circle")
+          .attr("cx", cx).attr("cy", cy).attr("r", r)
+          .attr("fill", "none")
+          .attr("stroke", "rgba(255,255,255,0.05)")
+          .attr("stroke-dasharray", "2 4");
+        ringsG.append("text")
+          .attr("x", cx + 4).attr("y", cy - r - 3)
+          .attr("fill", "rgba(255,255,255,0.18)")
+          .style("font-size", "12px")
+          .text(`${ch} ch`);
+      });
+
+      const starsG = skySvg.append("g");
+      const stars = starsG.selectAll("circle")
+        .data(nodes, d => d.pubkey_short)
+        .join("circle")
+        .attr("class", "star")
+        .attr("r", size)
+        .attr("fill", STAR_IDLE)
+        .style("color", STAR_IDLE)
+        .style("animation-delay", () => `${(Math.random() * 4).toFixed(2)}s`)
+        .style("animation-duration", () => `${(3 + Math.random() * 3).toFixed(2)}s`);
+
+      stars.on("mouseover", (event, d) => {
+        const feats = d.supports.length ? d.supports.join(", ") : "—";
+        const cap = (d.capacity_sat / 1e8).toFixed(2);
+        tt.style("opacity", 1).html(
+          `<div class="fv-alias">${escapeHtml(d.alias || "unnamed")}</div>` +
+          `<div class="fv-meta">${d.channels.toLocaleString()} channels · ${cap} BTC</div>` +
+          `<div class="fv-feat">${escapeHtml(feats)}</div>`
+        );
+      })
+      .on("mousemove", event => tt.style("left", (event.pageX + 14) + "px").style("top", (event.pageY - 24) + "px"))
+      .on("mouseout", () => tt.style("opacity", 0));
+
+      const sim = d3.forceSimulation(nodes)
+        .alphaDecay(0.04)
+        .force("radial", d3.forceRadial(d => d.targetR, cx, cy).strength(0.15))
+        .force("collide", d3.forceCollide(d => size(d) + 1.5).strength(0.85))
+        .force("center", d3.forceCenter(cx, cy).strength(0.005))
+        .on("tick", () => {
+          stars.attr("cx", d => d.x).attr("cy", d => d.y);
+        });
+      setTimeout(() => sim.alphaTarget(0.005).restart(), 4000);
+
+      // ----- Feature panel: click a feature to light up its nodes -----
+      const counts = Object.fromEntries(FEATURES.map(f =>
+        [f.key, nodes.filter(n => n.supportSet.has(f.key)).length]));
+      let active = null;
+
+      function applyHighlight() {
+        const feat = active ? FEATURE_BY_KEY[active] : null;
+        stars
+          .classed("is-lit", d => !!feat && d.supportSet.has(feat.key))
+          .classed("is-dim", d => !!feat && !d.supportSet.has(feat.key))
+          .attr("fill", d => {
+            if (!feat) return STAR_IDLE;
+            return d.supportSet.has(feat.key) ? feat.color : STAR_DIM;
+          })
+          .style("color", d => {
+            if (!feat) return STAR_IDLE;
+            return d.supportSet.has(feat.key) ? feat.color : STAR_DIM;
+          })
+          .style("filter", d => {
+            if (!feat || !d.supportSet.has(feat.key)) return null;
+            return "drop-shadow(0 0 4px currentColor)";
+          });
+        // Lit stars should draw on top of dim ones.
+        if (feat) stars.filter(d => d.supportSet.has(feat.key)).raise();
+        panel.selectAll(".fv-feature")
+          .classed("is-active", f => f.key === active)
+          .attr("aria-pressed", f => String(f.key === active));
+      }
+
+      const panel = d3.select("#fv-panel");
+      panel.append("div").attr("class", "fv-heading").text(`${nodes.length} nodes · ${nodesDoc.date}`);
+      const rows = panel.selectAll(".fv-feature")
+        .data(FEATURES)
+        .join("button")
+        .attr("type", "button")
+        .attr("class", "fv-feature")
+        .attr("aria-pressed", "false")
+        .style("color", f => f.color)
+        .on("click", (event, f) => {
+          active = active === f.key ? null : f.key;
+          applyHighlight();
+        });
+      rows.append("span").attr("class", "fv-dot").style("background", f => f.color).style("color", f => f.color);
+      rows.append("span").attr("class", "fv-name").text(f => f.label);
+      rows.append("span").attr("class", "fv-count").text(f => {
+        const c = counts[f.key];
+        return `${c} · ${(100 * c / nodes.length).toFixed(0)}%`;
+      });
+      panel.append("div").attr("class", "fv-footnote").text("click a feature to light up its nodes · hover a star for detail");
+      applyHighlight();
+    } else {
+      d3.select("#fv-hero-caption").html("No constellation data yet — waiting for the first cron run.");
+    }
+
+    // ---------- Small multiples ----------
+    const status = document.getElementById("fv-status");
+    const grid = d3.select("#fv-grid");
+
+    let doc;
+    try { doc = await d3.json("/data/feature-adoption/snapshots.json"); }
+    catch (e) {
+      status.textContent = "Couldn't load snapshots.json — waiting for the first cron run.";
+      return;
+    }
+    const snapshots = (doc && doc.snapshots) || [];
+    if (snapshots.length === 0) {
+      status.textContent = "No snapshots yet — waiting for the first cron run.";
+      return;
+    }
+
+    const featureNames = Array.from(new Set(snapshots.flatMap(s => Object.keys(s.features))));
+    const parseDate = d3.timeParse("%Y-%m-%d");
+    const series = featureNames.map(name => ({
+      name,
+      color: (FEATURE_BY_KEY[name] || {}).color || "#2e8b57",
+      points: snapshots.map(s => {
+        const f = s.features[name];
+        return f ? { date: parseDate(s.date), pct: f.percentage, count: f.count, total: s.sample_size, bits: f.bits } : null;
+      }).filter(Boolean).sort((a, b) => a.date - b.date),
+    }));
+    const latestDate = d3.max(snapshots, s => parseDate(s.date));
+    status.innerHTML = `Latest snapshot: <strong>${d3.timeFormat("%Y-%m-%d")(latestDate)}</strong> · ${snapshots.length} day(s) of data`;
+
+    const cards = grid.selectAll(".card")
+      .data(series)
+      .join("div")
+      .attr("class", "card")
+      .style("--fv-series", d => d.color);
+    cards.append("h3").text(d => d.name);
+    cards.append("div").attr("class", "sub")
+      .text(d => `feature bits ${d.points[0]?.bits?.join(" / ") ?? "?"}`);
+    const headline = cards.append("div");
+    headline.append("span")
+      .attr("class", "big")
+      .text(d => {
+        const last = d.points[d.points.length - 1];
+        return last ? `${last.pct.toFixed(1)}%` : "—";
+      });
+    headline.append("span")
+      .attr("class", "delta")
+      .text(d => {
+        if (d.points.length < 2) return "";
+        const last = d.points[d.points.length - 1];
+        const prev = d.points[d.points.length - 2];
+        const delta = last.pct - prev.pct;
+        const sign = delta > 0 ? "▲" : delta < 0 ? "▼" : "·";
+        return `${sign} ${Math.abs(delta).toFixed(2)} pts vs prev`;
+      });
+
+    cards.each(function (d) {
+      const svg = d3.select(this).append("svg")
+        .attr("viewBox", "0 0 260 70")
+        .attr("preserveAspectRatio", "none");
+      if (d.points.length < 2) {
+        svg.append("text")
+          .attr("x", 130).attr("y", 40)
+          .attr("text-anchor", "middle")
+          .style("font-size", "11px")
+          .style("fill", "#aaa")
+          .text("need 2+ snapshots for a trend");
+        return;
+      }
+      const m = { top: 6, right: 6, bottom: 14, left: 6 };
+      const w = 260 - m.left - m.right;
+      const h = 70 - m.top - m.bottom;
+      const g = svg.append("g").attr("transform", `translate(${m.left},${m.top})`);
+      const x = d3.scaleTime().domain(d3.extent(d.points, p => p.date)).range([0, w]);
+      const yMax = Math.max(d3.max(d.points, p => p.pct) * 1.2, 5);
+      const y = d3.scaleLinear().domain([0, yMax]).range([h, 0]);
+      g.append("g")
+        .attr("class", "axis")
+        .attr("transform", `translate(0,${h})`)
+        .call(d3.axisBottom(x).ticks(3).tickFormat(d3.timeFormat("%b %d")).tickSizeOuter(0));
+      g.append("path")
+        .datum(d.points)
+        .attr("fill", "none")
+        .attr("stroke", d.color)
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line().x(p => x(p.date)).y(p => y(p.pct)).curve(d3.curveMonotoneX));
+      g.selectAll("circle")
+        .data(d.points)
+        .join("circle")
+        .attr("cx", p => x(p.date))
+        .attr("cy", p => y(p.pct))
+        .attr("r", 2.5)
+        .attr("fill", d.color)
+        .on("mouseover", (event, p) => {
+          tt.style("opacity", 1).html(
+            `<div class="fv-alias">${d3.timeFormat("%Y-%m-%d")(p.date)}</div>` +
+            `<div class="fv-meta">${p.pct.toFixed(2)}% (${p.count} / ${p.total})</div>`
+          );
+        })
+        .on("mousemove", event => tt.style("left", (event.pageX + 12) + "px").style("top", (event.pageY - 28) + "px"))
+        .on("mouseout", () => tt.style("opacity", 0));
+    });
+  })();
+})();
+</script>
+
+{% endblock main_content %}

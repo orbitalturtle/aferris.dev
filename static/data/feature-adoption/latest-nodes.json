@@ -1,0 +1,2294 @@
+{
+  "date": "2026-09-17",
+  "sample_size": 243,
+  "tracked_features": [
+    "onion_messages",
+    "route_blinding",
+    "keysend"
+  ],
+  "nodes": [
+    {
+      "pubkey_short": "03864ef025fde8fb",
+      "alias": "ACINQ",
+      "channels": 1836,
+      "capacity_sat": 36101511053,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0217890e3aad8d35",
+      "alias": "1ML.com node ALPHA",
+      "channels": 1683,
+      "capacity_sat": 768315362,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0242a4ae0c5bef18",
+      "alias": "CoinGate",
+      "channels": 1315,
+      "capacity_sat": 1749177700,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03ccc570ec6aaff0",
+      "alias": "LNT.Thailand",
+      "channels": 1209,
+      "capacity_sat": 52532216,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02c953421bc7f07b",
+      "alias": "LNT.chengdu",
+      "channels": 804,
+      "capacity_sat": 71201108,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "033d865621947870",
+      "alias": "bfx-lnd0",
+      "channels": 573,
+      "capacity_sat": 42515679181,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "033e9ce4e8f0e68f",
+      "alias": "LNBiG [Hub-2]",
+      "channels": 558,
+      "capacity_sat": 25612582715,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "027100442c3b79f6",
+      "alias": "block-iad-1",
+      "channels": 554,
+      "capacity_sat": 25059842593,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03fe47fdfea0f25f",
+      "alias": "fortuna-custody-stroom",
+      "channels": 544,
+      "capacity_sat": 23153423311,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0324ba2392e25bff",
+      "alias": "kappa",
+      "channels": 532,
+      "capacity_sat": 3532309906,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03cde60a6323f712",
+      "alias": "bfx-lnd1",
+      "channels": 516,
+      "capacity_sat": 27753613317,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "034ea80f8b148c75",
+      "alias": "LNBiG [Hub-1]",
+      "channels": 514,
+      "capacity_sat": 19207814961,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02c91d6aa51aa940",
+      "alias": "LNBiG [Hub-3]",
+      "channels": 495,
+      "capacity_sat": 14389836921,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0260fab633066ed7",
+      "alias": "TangoBolt",
+      "channels": 485,
+      "capacity_sat": 6310539130,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0364913d18a19c67",
+      "alias": "LQWD-Canada",
+      "channels": 475,
+      "capacity_sat": 2496164895,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "023d70f2f76d283c",
+      "alias": "gameb_1",
+      "channels": 429,
+      "capacity_sat": 339256351,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0298f6074a454a1f",
+      "alias": "BCash_Is_Trash",
+      "channels": 405,
+      "capacity_sat": 4408115511,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "037659a0ac8eb3b8",
+      "alias": "nicehash-ln1",
+      "channels": 404,
+      "capacity_sat": 7129104538,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03423790614f023e",
+      "alias": "Sunny Sarah \u2600\ufe0f",
+      "channels": 392,
+      "capacity_sat": 4717872265,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "035b1ff29e8db1ba",
+      "alias": "DiamondHands\ud83d\udc8e\ud83d\ude4c",
+      "channels": 334,
+      "capacity_sat": 1664750891,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d32e5618df518e",
+      "alias": "\ud83c\udde8\ud83c\uddedVix18",
+      "channels": 331,
+      "capacity_sat": 1215973682,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0294ac3e099def03",
+      "alias": "okx",
+      "channels": 323,
+      "capacity_sat": 16579073146,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03c8e5f583585cac",
+      "alias": "Strike",
+      "channels": 323,
+      "capacity_sat": 14589535567,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "030c3f19d742ca29",
+      "alias": "Bitrefill Routing",
+      "channels": 288,
+      "capacity_sat": 1817845124,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03a93b87bf9f052b",
+      "alias": "cyberdyne.sh",
+      "channels": 288,
+      "capacity_sat": 18234200579,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0340cfadaa3324e0",
+      "alias": "Babylon-4a",
+      "channels": 265,
+      "capacity_sat": 1747613542,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03afa7a8196dbca7",
+      "alias": "CoinPayments",
+      "channels": 259,
+      "capacity_sat": 902226002,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02757afbc23eafd8",
+      "alias": "BitGo Routing Node",
+      "channels": 247,
+      "capacity_sat": 1809606400,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02437c00ef5de268",
+      "alias": "Kraken \ud83d\udc19\u26a1",
+      "channels": 240,
+      "capacity_sat": 9851279777,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0326e692c455dd55",
+      "alias": "allNice | torq.co | second.tech",
+      "channels": 240,
+      "capacity_sat": 4662446466,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02cad4ec4c8b0dc2",
+      "alias": "xmrk reloaded",
+      "channels": 231,
+      "capacity_sat": 1997700888,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d607f3e69fd032",
+      "alias": "Bitrefill",
+      "channels": 225,
+      "capacity_sat": 2585677131,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02a04446caa81636",
+      "alias": "ln.bitstamp.net [Bitstamp]",
+      "channels": 211,
+      "capacity_sat": 379511299,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02ec20f34bb94460",
+      "alias": "ln-1.anycoin.cz",
+      "channels": 211,
+      "capacity_sat": 1016056011,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "026165850492521f",
+      "alias": "Boltz",
+      "channels": 204,
+      "capacity_sat": 532053540,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02f6155b106a9f92",
+      "alias": "VIVA",
+      "channels": 204,
+      "capacity_sat": 1925958949,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02a98e8c590a1b56",
+      "alias": "ed528ad49bedd1f7a638a",
+      "channels": 198,
+      "capacity_sat": 9855678209,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "039174f846626c60",
+      "alias": "e960fd8385a1603003727",
+      "channels": 195,
+      "capacity_sat": 10393118204,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "033b63e4a9931dc1",
+      "alias": "Garlic\ud83e\uddc4",
+      "channels": 191,
+      "capacity_sat": 2175236806,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "029efe15ef5f0fcc",
+      "alias": "adam.masterofpearls.net",
+      "channels": 190,
+      "capacity_sat": 2998028840,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03271338633d2d37",
+      "alias": "lnmarkets.com",
+      "channels": 190,
+      "capacity_sat": 3689146218,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02e4971e61a3f557",
+      "alias": "1sats.com\u26a1\ufe0flsp.flashsats.xyz",
+      "channels": 184,
+      "capacity_sat": 6394359031,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "025f1458d1ca75cb",
+      "alias": "MOLA",
+      "channels": 180,
+      "capacity_sat": 1852512229,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "037f990e61acee8a",
+      "alias": "fixedfloat.com",
+      "channels": 177,
+      "capacity_sat": 18329607255,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0280598b41a603ec",
+      "alias": "node8153",
+      "channels": 176,
+      "capacity_sat": 812701594,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "038ba8f67ba8ff5c",
+      "alias": "flashsats.xyz",
+      "channels": 173,
+      "capacity_sat": 4647347805,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "031a01e29587952e",
+      "alias": "LQWD-Japan",
+      "channels": 172,
+      "capacity_sat": 1014432370,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "038a9e56512ec98d",
+      "alias": "Megalith LSP",
+      "channels": 172,
+      "capacity_sat": 1078634462,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b62dd177f6a8bd",
+      "alias": "Nova",
+      "channels": 169,
+      "capacity_sat": 2066526848,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d6749842cabfbf",
+      "alias": "Satoshi 17",
+      "channels": 168,
+      "capacity_sat": 1535186907,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02f4c77dcf12255c",
+      "alias": "WCC-BOUNCER",
+      "channels": 167,
+      "capacity_sat": 1228104966,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "038bcc6471941c7d",
+      "alias": "MUTATRUM",
+      "channels": 166,
+      "capacity_sat": 552592237,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02dfb4c1dd59216f",
+      "alias": "routing.blinkbtc.com",
+      "channels": 163,
+      "capacity_sat": 4500843078,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03a1f3afd646d77b",
+      "alias": "Binance",
+      "channels": 163,
+      "capacity_sat": 36808400384,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03e875c708839f5c",
+      "alias": "Medium of Exchange",
+      "channels": 162,
+      "capacity_sat": 867684295,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03223cf7709a22ad",
+      "alias": "LNL",
+      "channels": 161,
+      "capacity_sat": 1040798246,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03e95b4144147cbb",
+      "alias": "Sally Acorn",
+      "channels": 161,
+      "capacity_sat": 611792423,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03e9c99fddf5aaa6",
+      "alias": "Shockwave Rider",
+      "channels": 158,
+      "capacity_sat": 1074721774,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "024c08d7cded0993",
+      "alias": "Coinduit",
+      "channels": 156,
+      "capacity_sat": 1358216308,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "020d1617e27ac022",
+      "alias": "i'llTryAnythingOnce",
+      "channels": 153,
+      "capacity_sat": 1818284135,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0231eccc6510eb2e",
+      "alias": "BitKassa LN34961 [LND]",
+      "channels": 152,
+      "capacity_sat": 463773947,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02be8a325c61af50",
+      "alias": "LQWD-England",
+      "channels": 151,
+      "capacity_sat": 784772305,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0337694505123a12",
+      "alias": "\ud83d\udc9a0337\ud83c\udf3d6945\ud83e\udd84",
+      "channels": 148,
+      "capacity_sat": 761287361,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03cc1d0932bb99b0",
+      "alias": "stacker.news",
+      "channels": 147,
+      "capacity_sat": 643273501,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02529db69fd2ebd3",
+      "alias": "\ud83d\ude80\ud83c\udf11 BOLTENING.club",
+      "channels": 146,
+      "capacity_sat": 232075473,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "026f46207fd290a3",
+      "alias": "Authenticity",
+      "channels": 146,
+      "capacity_sat": 6873938378,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02b21ca992bf95e3",
+      "alias": "8DegreesWO",
+      "channels": 146,
+      "capacity_sat": 802412574,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0206db3b9c7475b2",
+      "alias": "Open_Hand",
+      "channels": 143,
+      "capacity_sat": 1229458016,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02ba545858376092",
+      "alias": "\ud83d\udee1 Don Quixote Bank \ud83d\udea9",
+      "channels": 142,
+      "capacity_sat": 655019208,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02b4552a7a85274e",
+      "alias": "LNServer_Wave",
+      "channels": 140,
+      "capacity_sat": 603741682,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "039cdd937f8d83fb",
+      "alias": "Kazumyon",
+      "channels": 140,
+      "capacity_sat": 1121564353,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d6c33746ea3222",
+      "alias": "03d6c33746ea3222f5fc",
+      "channels": 139,
+      "capacity_sat": 2258313982,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0272bafa59999de0",
+      "alias": "BIG",
+      "channels": 138,
+      "capacity_sat": 956849598,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0243bf62e9cbe219",
+      "alias": "Socrates",
+      "channels": 137,
+      "capacity_sat": 581330966,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0391904d140fdf88",
+      "alias": "LifeIsGood",
+      "channels": 136,
+      "capacity_sat": 7157345405,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02f31f23d87a366e",
+      "alias": "Uncle Jim's Node",
+      "channels": 133,
+      "capacity_sat": 5207502453,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0322d0e43b3d92d3",
+      "alias": "Megalithic.me",
+      "channels": 133,
+      "capacity_sat": 8749570929,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03632f5c3e45832d",
+      "alias": "Julia\u26a1\ufe0fLND01",
+      "channels": 133,
+      "capacity_sat": 6206337957,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03e4f3d7ccf98bdb",
+      "alias": "LQWD-Australia",
+      "channels": 132,
+      "capacity_sat": 883643069,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02058a29920854e5",
+      "alias": "AgX\ud83d\uddf2",
+      "channels": 131,
+      "capacity_sat": 287959682,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02907887f9bfcc9e",
+      "alias": "tokyo",
+      "channels": 131,
+      "capacity_sat": 450005347,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "033acb18b31498eb",
+      "alias": "T\ud83c\udf2eCO",
+      "channels": 131,
+      "capacity_sat": 1533407560,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0242d24860bfc7f7",
+      "alias": "\u26a1\ud83d\udc7bghostpdh\ud83c\udc04CA",
+      "channels": 130,
+      "capacity_sat": 227684339,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0391e2edea519162",
+      "alias": "Lucky.Dog",
+      "channels": 130,
+      "capacity_sat": 461753262,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "032ae3168ba52314",
+      "alias": "LQWD-France",
+      "channels": 124,
+      "capacity_sat": 1260386757,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0381dbc5290c1c5a",
+      "alias": "schulzemic [LND]",
+      "channels": 122,
+      "capacity_sat": 400227112,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "026b33a83311adeb",
+      "alias": "Volarte\u26a1",
+      "channels": 121,
+      "capacity_sat": 326171246,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "039bde7aea7d48f3",
+      "alias": "039bde7aea7d48f3ced5",
+      "channels": 117,
+      "capacity_sat": 804838429,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03dbc10e29cf092b",
+      "alias": "Bifurcation\ud83d\uddf2Point",
+      "channels": 115,
+      "capacity_sat": 685206245,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03e86afe389d298f",
+      "alias": "New Horizons",
+      "channels": 113,
+      "capacity_sat": 619674586,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03c157946cc1cd37",
+      "alias": "The Continental",
+      "channels": 112,
+      "capacity_sat": 4462755292,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "037f66e84e38fc27",
+      "alias": "HODLmeTight",
+      "channels": 111,
+      "capacity_sat": 1086986352,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "021f98b9898720f8",
+      "alias": "betheball",
+      "channels": 110,
+      "capacity_sat": 1029549098,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "025f1456582e70c4",
+      "alias": "Moon (paywithmoon.com)",
+      "channels": 108,
+      "capacity_sat": 900920128,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03c5bfa5cab7e52e",
+      "alias": "Clack Bank",
+      "channels": 108,
+      "capacity_sat": 363456681,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0204a91bb5802ad0",
+      "alias": "t4es5ter5",
+      "channels": 106,
+      "capacity_sat": 1490648956,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "023e09c43b215bd3",
+      "alias": "\u26a1\u26a1CHARGED\u26a1\u26a1",
+      "channels": 106,
+      "capacity_sat": 984981342,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "036635ba9a28a8ba",
+      "alias": "absolute.money",
+      "channels": 106,
+      "capacity_sat": 1228018139,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "025124c73ef7ecf5",
+      "alias": "CHILLYCALENDAR",
+      "channels": 103,
+      "capacity_sat": 315404459,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02b3239d36d7e3e3",
+      "alias": "LighToshi.node",
+      "channels": 101,
+      "capacity_sat": 613348020,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "021c97a90a411ff2",
+      "alias": "LOOP",
+      "channels": 65,
+      "capacity_sat": 11250696528,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0288be11d147e152",
+      "alias": "yalls.org clearnet-yalls",
+      "channels": 89,
+      "capacity_sat": 5785744573,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03da1c27ca77872a",
+      "alias": "LNBiG [Edge-3]",
+      "channels": 56,
+      "capacity_sat": 5057076843,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02e9046555a96651",
+      "alias": "SilentBob",
+      "channels": 79,
+      "capacity_sat": 4743625852,
+      "supports": [
+        "onion_messages"
+      ]
+    },
+    {
+      "pubkey_short": "02c197ffa4c2aa41",
+      "alias": "BC.GAME",
+      "channels": 38,
+      "capacity_sat": 4679611879,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "026af41af0e3861b",
+      "alias": "BitcoinVN 22",
+      "channels": 89,
+      "capacity_sat": 4480637818,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03bc9337c7a28bb7",
+      "alias": "LNBiG [Edge-2]",
+      "channels": 38,
+      "capacity_sat": 4306971681,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "027cd974e4708629",
+      "alias": "lndus0.zaphq.io",
+      "channels": 46,
+      "capacity_sat": 3828483212,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02b21730bc360616",
+      "alias": "Tachyon",
+      "channels": 15,
+      "capacity_sat": 3536000000,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b65c19de2da9d3",
+      "alias": "Alby \ud83d\udc1d routing \u26a1 1",
+      "channels": 45,
+      "capacity_sat": 3422700600,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0256ccca46170ff4",
+      "alias": "0256ccca46170ff4b1ef",
+      "channels": 18,
+      "capacity_sat": 3200000000,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "034b3ecd8d87edf1",
+      "alias": "PaidlyInteractive2\u26a1",
+      "channels": 37,
+      "capacity_sat": 3189563996,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03abf6f44c355dec",
+      "alias": "OpenNode.com 1",
+      "channels": 58,
+      "capacity_sat": 3018630639,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02e20917565c68c7",
+      "alias": "lndnode08",
+      "channels": 87,
+      "capacity_sat": 2825552145,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03a59ebd9a20f2b8",
+      "alias": "BitDance LND1",
+      "channels": 32,
+      "capacity_sat": 2786176402,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03501a74753e0f6a",
+      "alias": "IBEX_Ops1",
+      "channels": 90,
+      "capacity_sat": 2774305213,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03ae4b2ec2702284",
+      "alias": "03ae4b2ec2702284ad54",
+      "channels": 27,
+      "capacity_sat": 2755845246,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02b7291fcf57fd64",
+      "alias": "Snow",
+      "channels": 14,
+      "capacity_sat": 2720000868,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "028d98b9969fbed5",
+      "alias": "OpenNode.com 2",
+      "channels": 53,
+      "capacity_sat": 2670261023,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "028b10be90ddfb4e",
+      "alias": "paxful",
+      "channels": 70,
+      "capacity_sat": 2448548912,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "031015a7839468a3",
+      "alias": "031015a7839468a3c",
+      "channels": 66,
+      "capacity_sat": 2425870004,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0390b5d4492dc2f5",
+      "alias": "LNBiG [Edge-1]",
+      "channels": 11,
+      "capacity_sat": 2195698630,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0371ccb71e383898",
+      "alias": "cwallet.com",
+      "channels": 90,
+      "capacity_sat": 2192435037,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0378a5312ca36773",
+      "alias": "OneKey",
+      "channels": 37,
+      "capacity_sat": 2140924726,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "028a33a72ecb0996",
+      "alias": "block-pdx-1",
+      "channels": 50,
+      "capacity_sat": 2094789795,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0379dbd35a22abe3",
+      "alias": "points-nexus",
+      "channels": 34,
+      "capacity_sat": 2054026374,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b006c37dfb8681",
+      "alias": "YTMND",
+      "channels": 51,
+      "capacity_sat": 2050831016,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "030bd936b47a53af",
+      "alias": "Bitrefill A",
+      "channels": 84,
+      "capacity_sat": 2004107169,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "033b74d74d6b7d96",
+      "alias": "033b74d74d6b7d96e89e",
+      "channels": 16,
+      "capacity_sat": 2003355521,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03037dc08e9ac63b",
+      "alias": "River Financial 1",
+      "channels": 53,
+      "capacity_sat": 1985535931,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "028dbc6a2716acb8",
+      "alias": "Babel",
+      "channels": 11,
+      "capacity_sat": 1974825666,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02dfe525d9c5b4bb",
+      "alias": "02dfe525d9c5b4bb52a5",
+      "channels": 100,
+      "capacity_sat": 1920723265,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b428ba4b48b524",
+      "alias": "lndus1.zaphq.io",
+      "channels": 24,
+      "capacity_sat": 1917625275,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03ecef675be448b6",
+      "alias": "Electrum Trampoline",
+      "channels": 48,
+      "capacity_sat": 1908256145,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02a0f17d3ddb81b3",
+      "alias": "Goblin\u26a1Node",
+      "channels": 63,
+      "capacity_sat": 1894149447,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "031df8ea711416b5",
+      "alias": "speed1",
+      "channels": 45,
+      "capacity_sat": 1882059922,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03ac2abafea57755",
+      "alias": "speed6",
+      "channels": 39,
+      "capacity_sat": 1819623230,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02f9cdc8df3f142d",
+      "alias": "Porcino \ud83c\udf44\u200d\ud83d\udfeb",
+      "channels": 49,
+      "capacity_sat": 1784743744,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02ba0c09d9469874",
+      "alias": "PaidlyInteractive\u26a1",
+      "channels": 24,
+      "capacity_sat": 1705263948,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03d1739dcb86ce7a",
+      "alias": "03d1739dcb86ce7a48d1",
+      "channels": 95,
+      "capacity_sat": 1544532093,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02abfbe63425b1ba",
+      "alias": "Azteco",
+      "channels": 96,
+      "capacity_sat": 1500958642,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03df3f0a2fd6bea5",
+      "alias": "CryptoChill",
+      "channels": 95,
+      "capacity_sat": 1478933642,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d35779ff612c57",
+      "alias": "IBEX_Routing",
+      "channels": 61,
+      "capacity_sat": 1465950902,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0261239197442bda",
+      "alias": "LNChamp",
+      "channels": 32,
+      "capacity_sat": 1368124974,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03edcf2358b9920e",
+      "alias": "speed7",
+      "channels": 34,
+      "capacity_sat": 1365388008,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d06758583bb515",
+      "alias": "yalls.org yalls-tor",
+      "channels": 33,
+      "capacity_sat": 1300642048,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "031f2669adab7154",
+      "alias": "Voltage",
+      "channels": 87,
+      "capacity_sat": 1296254122,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "031799c401adff64",
+      "alias": "N21",
+      "channels": 100,
+      "capacity_sat": 1271322167,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "023a89bcaf5d6635",
+      "alias": "bitz23",
+      "channels": 10,
+      "capacity_sat": 1260500000,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02d4531a2f2e6e5a",
+      "alias": "coinfinity.co",
+      "channels": 5,
+      "capacity_sat": 12399276,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02eae56f155bae8a",
+      "alias": "Satoshi's Vision",
+      "channels": 1,
+      "capacity_sat": 223991,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03fab7f8655169ea",
+      "alias": "\ud83d\udc38webworker.sh\ud83d\udc38",
+      "channels": 1,
+      "capacity_sat": 5000000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02ad6fb8d693dc1e",
+      "alias": "hashposition.com \ud83d\udd35",
+      "channels": 78,
+      "capacity_sat": 332249684,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03b1be68b8f564fe",
+      "alias": "Plasma\u26a1\u26a1\u26a1Release",
+      "channels": 2,
+      "capacity_sat": 138914,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03c2d52cdcb5ddd4",
+      "alias": "\u2607 Kind84 \u2607",
+      "channels": 2,
+      "capacity_sat": 547259,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03434a39cd9a537c",
+      "alias": "***ROUTE 66***",
+      "channels": 1,
+      "capacity_sat": 20000,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "033ac2f9f7ff643c",
+      "alias": "Red.de.Rayos",
+      "channels": 1,
+      "capacity_sat": 2000000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "026844fe6d8c9dc5",
+      "alias": "olha",
+      "channels": 5,
+      "capacity_sat": 14200001,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03d301eedc094923",
+      "alias": "cybertide.com",
+      "channels": 1,
+      "capacity_sat": 500000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "031d244a60d61936",
+      "alias": "Berlin",
+      "channels": 3,
+      "capacity_sat": 1622569,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "032c4b954f0f171b",
+      "alias": "nute.net",
+      "channels": 1,
+      "capacity_sat": 71855,
+      "supports": []
+    },
+    {
+      "pubkey_short": "027fe40fda644dbb",
+      "alias": "E-PARA.NET",
+      "channels": 1,
+      "capacity_sat": 2000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "037cc080c5dc8f93",
+      "alias": "Cypher Core [LND]",
+      "channels": 1,
+      "capacity_sat": 89141,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02445ff6a24e6924",
+      "alias": "hmmmstrange",
+      "channels": 54,
+      "capacity_sat": 80743589,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02241e1d480fceda",
+      "alias": "freedomnode.com",
+      "channels": 1,
+      "capacity_sat": 1200000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0331a2398d2787f3",
+      "alias": "ANGRYNET-016-11-21-2367-g5737853",
+      "channels": 1,
+      "capacity_sat": 3333,
+      "supports": []
+    },
+    {
+      "pubkey_short": "033dd79123e7c386",
+      "alias": "\ud83e\uddc0",
+      "channels": 37,
+      "capacity_sat": 86429416,
+      "supports": [
+        "onion_messages",
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0354d8382003663d",
+      "alias": "graph.lndexplorer.com",
+      "channels": 1,
+      "capacity_sat": 26077,
+      "supports": []
+    },
+    {
+      "pubkey_short": "037172d2110c4148",
+      "alias": "AQUARIOUS",
+      "channels": 44,
+      "capacity_sat": 270749295,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03f2e1a52f35cc0b",
+      "alias": "kademlia",
+      "channels": 1,
+      "capacity_sat": 2000000,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "032246096fcfbc78",
+      "alias": "kulning",
+      "channels": 2,
+      "capacity_sat": 33552656,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03557fd11b58cb93",
+      "alias": "TorGuard VPN",
+      "channels": 1,
+      "capacity_sat": 60000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03377f891367579d",
+      "alias": "WOBBLYKNEES_III",
+      "channels": 5,
+      "capacity_sat": 4955630,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02108e8231dad3c1",
+      "alias": "TheByteBoosters",
+      "channels": 1,
+      "capacity_sat": 175364,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02740c62f3889651",
+      "alias": "BeerselLightningNode",
+      "channels": 19,
+      "capacity_sat": 53390000,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "024bda1ec91b277d",
+      "alias": "GSV-Empiricist",
+      "channels": 4,
+      "capacity_sat": 4942897,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0274ce2cee126688",
+      "alias": "BitMEX",
+      "channels": 1,
+      "capacity_sat": 20000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03beddc8adbf7d56",
+      "alias": "ln.felixweis.com",
+      "channels": 13,
+      "capacity_sat": 46646763,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "02272bd12e59324d",
+      "alias": "SMOZER",
+      "channels": 1,
+      "capacity_sat": 20000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02b41692ce80168d",
+      "alias": "tximista",
+      "channels": 2,
+      "capacity_sat": 438427,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03c2b5e97173e2ff",
+      "alias": "ln1.1sat.org",
+      "channels": 12,
+      "capacity_sat": 19051388,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "024cd3be18617f39",
+      "alias": "ln2.kosmos.org",
+      "channels": 10,
+      "capacity_sat": 53436905,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03f47ba61341a704",
+      "alias": "FirstBlockCapital",
+      "channels": 3,
+      "capacity_sat": 581537,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02b65dbae39dc11c",
+      "alias": "IslandDSP",
+      "channels": 4,
+      "capacity_sat": 2000000,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "022a94ee8d3b1dd5",
+      "alias": "light#CercleDuCoin",
+      "channels": 1,
+      "capacity_sat": 270587,
+      "supports": []
+    },
+    {
+      "pubkey_short": "036ac04a69f2ab58",
+      "alias": "Serving Beer",
+      "channels": 1,
+      "capacity_sat": 273199,
+      "supports": []
+    },
+    {
+      "pubkey_short": "034c5950fb9db380",
+      "alias": "Casimir",
+      "channels": 3,
+      "capacity_sat": 1350000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "022df3659d511f15",
+      "alias": "Coinnet.EU Lightning \u2607",
+      "channels": 3,
+      "capacity_sat": 2070000,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02a45def9ae014fd",
+      "alias": "02a45def9ae014fdd260",
+      "channels": 11,
+      "capacity_sat": 29411055,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "022c699df736064b",
+      "alias": "GloBee.com",
+      "channels": 1,
+      "capacity_sat": 130000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0283065d6d5b1fbe",
+      "alias": "mainnet.clobig.com",
+      "channels": 1,
+      "capacity_sat": 242756,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03db39d2f0bff36f",
+      "alias": "cryptotec.com",
+      "channels": 1,
+      "capacity_sat": 50000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02b19c4088fff675",
+      "alias": "CIRCOPAY",
+      "channels": 2,
+      "capacity_sat": 834261,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "035c2823f8d1bfad",
+      "alias": "CoinGate",
+      "channels": 5,
+      "capacity_sat": 100000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0256812a1cb2539a",
+      "alias": "guggero",
+      "channels": 1,
+      "capacity_sat": 700116,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b99d5aed3eb17e",
+      "alias": "feleena",
+      "channels": 3,
+      "capacity_sat": 11012174,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "032f3c9728004b8b",
+      "alias": "SIYANA.IO",
+      "channels": 1,
+      "capacity_sat": 132552,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0383bcd503022056",
+      "alias": "kugelblitz",
+      "channels": 1,
+      "capacity_sat": 200000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "031678745383bd27",
+      "alias": "lightning-roulette.com",
+      "channels": 7,
+      "capacity_sat": 36600000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0290fb6ecd5865f7",
+      "alias": "\ud83e\udd52CTRLBREAK\ud83e\udd52",
+      "channels": 12,
+      "capacity_sat": 51974573,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02ab16f790c7727e",
+      "alias": "lightning-pay.eu",
+      "channels": 1,
+      "capacity_sat": 253437,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02c16149d3ce6ccd",
+      "alias": "Pat\u20bfoy",
+      "channels": 25,
+      "capacity_sat": 35996879,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "03f18da23535adee",
+      "alias": "ln.zone receiveing pay solution",
+      "channels": 1,
+      "capacity_sat": 391938,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03440b50d61eac35",
+      "alias": "PerpetualSummer.ltd",
+      "channels": 1,
+      "capacity_sat": 126191,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02c213c3c62d2674",
+      "alias": "\u26a1BUE.ARG\u26a1",
+      "channels": 1,
+      "capacity_sat": 174997,
+      "supports": []
+    },
+    {
+      "pubkey_short": "026ac9fcd64fb1aa",
+      "alias": "fancyfinance",
+      "channels": 4,
+      "capacity_sat": 13200000,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "0211e23e154bb0b8",
+      "alias": "Argonalyst",
+      "channels": 1,
+      "capacity_sat": 333202,
+      "supports": []
+    },
+    {
+      "pubkey_short": "032a687f12cc5e3a",
+      "alias": "Opcode",
+      "channels": 1,
+      "capacity_sat": 480000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03a38700a1dc68bf",
+      "alias": "VakhosDionissos",
+      "channels": 1,
+      "capacity_sat": 179821,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "02a1d2856be336a5",
+      "alias": "02a1d2856be336a58af0",
+      "channels": 37,
+      "capacity_sat": 19278332,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0201cc5c23736816",
+      "alias": "NORWAY",
+      "channels": 1,
+      "capacity_sat": 500000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "032170f8263f41e5",
+      "alias": "cryptocc.io",
+      "channels": 1,
+      "capacity_sat": 176716,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03c436af41160a35",
+      "alias": "mainnet.lightningconductor.net",
+      "channels": 1,
+      "capacity_sat": 500000,
+      "supports": [
+        "onion_messages"
+      ]
+    },
+    {
+      "pubkey_short": "024509d6321a579b",
+      "alias": "Moon_Base",
+      "channels": 41,
+      "capacity_sat": 344467778,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03dbd8ef074d8760",
+      "alias": "clarence",
+      "channels": 2,
+      "capacity_sat": 700000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02964c50e8978689",
+      "alias": "Raipats Rainmeter",
+      "channels": 1,
+      "capacity_sat": 500000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02868e12f320073c",
+      "alias": "lnd.coinos.io",
+      "channels": 1,
+      "capacity_sat": 2000000,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "026cd1a69fee4c9e",
+      "alias": "Amsterdam",
+      "channels": 1,
+      "capacity_sat": 25699,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0212e500e63f4816",
+      "alias": "crypt0e",
+      "channels": 1,
+      "capacity_sat": 24089,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03baa70886d9200a",
+      "alias": "LIGHTNING",
+      "channels": 7,
+      "capacity_sat": 124258373,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03e9e0f9aaba1ccb",
+      "alias": "TargetSpecies",
+      "channels": 1,
+      "capacity_sat": 852625,
+      "supports": []
+    },
+    {
+      "pubkey_short": "036d81bb87af589f",
+      "alias": "hirish-ln",
+      "channels": 17,
+      "capacity_sat": 26261208,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "024b82d69859d63f",
+      "alias": "\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d\ud83d\udc7d",
+      "channels": 1,
+      "capacity_sat": 500000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "020bbb584a5008a9",
+      "alias": "ribeye\ud83d\udc41\u3030\ud83d\udc41",
+      "channels": 1,
+      "capacity_sat": 273149,
+      "supports": []
+    },
+    {
+      "pubkey_short": "035f4278d12e27f3",
+      "alias": "luce",
+      "channels": 1,
+      "capacity_sat": 243325,
+      "supports": [
+        "route_blinding"
+      ]
+    },
+    {
+      "pubkey_short": "0215bea618806194",
+      "alias": "lightning.emzy.de",
+      "channels": 37,
+      "capacity_sat": 189118812,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03d67f36c4f81789",
+      "alias": "Jubilee",
+      "channels": 16,
+      "capacity_sat": 82140776,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03e72fb9b743546a",
+      "alias": "DeplorableCarnivore",
+      "channels": 8,
+      "capacity_sat": 5621000,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "038c4288a41c79e4",
+      "alias": "LightningBout",
+      "channels": 2,
+      "capacity_sat": 402000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03e3ec0c6f3c700f",
+      "alias": "glassmus",
+      "channels": 1,
+      "capacity_sat": 239757,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02d92baff1d5cac4",
+      "alias": "cryptopolitics.global",
+      "channels": 1,
+      "capacity_sat": 407582,
+      "supports": []
+    },
+    {
+      "pubkey_short": "03a7daef60143b48",
+      "alias": "\u26a1\ufe0fancap\u26a1\ufe0f",
+      "channels": 1,
+      "capacity_sat": 80000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "034ab5f3069e95b3",
+      "alias": "TAKASHI",
+      "channels": 1,
+      "capacity_sat": 48000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "02f0eb41b5fb63ba",
+      "alias": "CryptoInvestor",
+      "channels": 1,
+      "capacity_sat": 305558,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0228e4b5e00a05f4",
+      "alias": "thedeathnode",
+      "channels": 2,
+      "capacity_sat": 2162488,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0362bc1141ed558a",
+      "alias": "0362bc1141ed558a646c",
+      "channels": 1,
+      "capacity_sat": 2000000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0366a57e383a6191",
+      "alias": "StrangerDanger",
+      "channels": 1,
+      "capacity_sat": 141730,
+      "supports": [
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03fbe1c1baedbc99",
+      "alias": "\u26a1TheBebop\u26a1",
+      "channels": 11,
+      "capacity_sat": 97500000,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03f9ceb115a11959",
+      "alias": "littleAlice \u2607",
+      "channels": 6,
+      "capacity_sat": 1200000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "020de4c7b3fcca7e",
+      "alias": "XanthinTwin",
+      "channels": 25,
+      "capacity_sat": 92141441,
+      "supports": [
+        "onion_messages",
+        "route_blinding",
+        "keysend"
+      ]
+    },
+    {
+      "pubkey_short": "03b12fae9d38beca",
+      "alias": "\u262d - USSR - \u262d",
+      "channels": 1,
+      "capacity_sat": 25000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "0320a504eda3dcc9",
+      "alias": "southern cross",
+      "channels": 1,
+      "capacity_sat": 100000,
+      "supports": []
+    },
+    {
+      "pubkey_short": "024a8228d764091f",
+      "alias": "node01.fulmo.org",
+      "channels": 64,
+      "capacity_sat": 309883286,
+      "supports": [
+        "route_blinding",
+        "keysend"
+      ]
+    }
+  ]
+}

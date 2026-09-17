@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "snapshots": [
+    {
+      "date": "2026-05-23",
+      "source": "mempool.space",
+      "sample_strategy": "pooled top-N rankings (connectivity + liquidity + age)",
+      "sample_size": 240,
+      "failed_fetches": 0,
+      "features": {
+        "onion_messages": {
+          "bits": [
+            38,
+            39
+          ],
+          "count": 36,
+          "percentage": 15.0
+        },
+        "route_blinding": {
+          "bits": [
+            24,
+            25
+          ],
+          "count": 173,
+          "percentage": 72.083
+        },
+        "keysend": {
+          "bits": [
+            54,
+            55
+          ],
+          "count": 123,
+          "percentage": 51.25
+        }
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "source": "mempool.space",
+      "sample_strategy": "pooled top-N rankings (connectivity + liquidity + age)",
+      "sample_size": 243,
+      "failed_fetches": 0,
+      "features": {
+        "onion_messages": {
+          "bits": [
+            38,
+            39
+          ],
+          "count": 93,
+          "percentage": 38.272
+        },
+        "route_blinding": {
+          "bits": [
+            24,
+            25
+          ],
+          "count": 176,
+          "percentage": 72.428
+        },
+        "keysend": {
+          "bits": [
+            54,
+            55
+          ],
+          "count": 125,
+          "percentage": 51.44
+        }
+      }
+    }
+  ]
+}
